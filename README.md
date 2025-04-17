@@ -8,18 +8,21 @@
   Utiliza as APIs do ChatGPT (OpenAI) e DeepSeek para orientar suas operações de pentest, sugerindo comandos personalizados com base nas suas consultas.
 
 - **Execução interativa de comandos:**  
-  O código detecta comandos nas respostas (em blocos de código ou linhas que iniciam com `$`) e permite que o usuário:
-  - Execute o comando em um Terminal interativo (usando `xterm`);
+  O código detecta comandos nas respostas **(sempre apresentados em blocos de código markdown, por exemplo, ```bash ... ```)** e permite que o usuário:
+  - Execute o comando em um Terminal interativo (usando `xterm`), onde o comando é rodado automaticamente em uma nova janela e a saída é capturada para análise posterior;
+  - Execute manualmente o comando em um shell interativo local, podendo digitar, colar e interagir livremente, e depois informar ao sistema a saída relevante;
   - Edite o comando antes da execução;
   - Pule o comando, se preferir.
+
+  Após a execução, o usuário pode editar a saída capturada (abrindo no nano ou vim, se desejar) e escolher se deseja enviar essa saída de volta ao HackingGPT para análise e próximos passos. Todo o fluxo é interativo e controlado pelo usuário, permitindo integração contínua entre comandos, saídas e novas perguntas.
 
 - **Integração de resultados:**  
   Os resultados dos comandos executados são agregados e enviados de volta à API para nova análise, permitindo um fluxo contínuo de orientação.
 
 - **Integração com múltiplas APIs:**  
   Compatível com:
-  - OpenAI: modelos como `gpt-4o` e `gpt-4o-mini`;
-  - DeepSeek: modelos como `deepseek-chat` e `deepseek-reasoner`.
+  - OpenAI: modelos como `gpt-4.1`, `o1`, `o3-mini`;
+  - DeepSeek: modelos como `deepseek-chat` (DeepSeek-V3) e `deepseek-reasoner` (DeepSeek-R1).
 
 - **Interface colorida:**  
   Utiliza a biblioteca [Rich](https://github.com/willmcgugan/rich) para exibir mensagens formatadas e renderizar Markdown com cores no Terminal.
@@ -27,12 +30,16 @@
 - **Configuração via variáveis de ambiente:**  
   As chaves de API são carregadas automaticamente das variáveis de ambiente para maior segurança.
 
+- **Foco ofensivo:**  
+  O HackingGPT é orientado para segurança ofensiva. O assistente evita recomendações de mitigação, defesa ou correção, a menos que solicitado explicitamente pelo usuário. O objetivo é sempre explorar, identificar falhas e sugerir formas de exploração e pós-exploração, sem julgamentos éticos ou legais.
+
 ## Requisitos
 
 - **Python 3.8+**
 - **Dependências externas:**
   - `requests`
   - `rich`
+  - `prompt_toolkit`
 - **Sistema operacional compatível:**
   - Linux ou WSL (para suporte ao `xterm`).
 - **Chaves de API:**
@@ -43,7 +50,7 @@ Para instalar as dependências, execute:
 
 ```bash
 pip install -r requirements.txt
-````
+```
 
 ## Instalação
 
