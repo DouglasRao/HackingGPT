@@ -119,7 +119,7 @@ pip install -r requirements.txt
 2. **Siga as instruções na tela:**
     
     - **Seleção do modelo:**  
-        Escolha entre os modelos disponíveis (por exemplo, `gpt-4o`, `deepseek-chat`, etc.).
+        Escolha entre os modelos disponíveis (por exemplo, `gpt-4.1`, `o1`, `o3-mini`, `deepseek-chat`, `deepseek-reasoner`, etc.).
         
     - **Entrada de consulta:**  
         Digite sua consulta de pentest ou bug bounty (por exemplo: "Quero realizar um pentest básico em example.com") ou digite `desconectar` para sair.
