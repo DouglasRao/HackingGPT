@@ -1,151 +1,153 @@
 # HackingGPT
 
-**HackingGPT** é uma ferramenta de Terminal avançada para pentest e bug bounty que integra as APIs do ChatGPT e DeepSeek para auxiliar pesquisadores de segurança na execução e análise de comandos – tudo diretamente pelo Terminal.
+**HackingGPT** is an advanced terminal tool for pentest and bug bounty that integrates the ChatGPT and DeepSeek APIs to assist security researchers in executing and analyzing commands — all directly from the terminal.
 
-## Funcionalidades
+## Features
 
-- **Assistência dinâmica:**  
-  Utiliza as APIs do ChatGPT (OpenAI) e DeepSeek para orientar suas operações de pentest, sugerindo comandos personalizados com base nas suas consultas.
+- **Dynamic assistance:**
+  Uses the ChatGPT (OpenAI) and DeepSeek APIs to guide your pentest operations, suggesting custom commands based on your queries.
 
-- **Execução interativa de comandos:**  
-  O código detecta comandos nas respostas **(sempre apresentados em blocos de código markdown, por exemplo, ```bash ... ```)** e permite que o usuário:
-  - Execute o comando em um Terminal interativo (usando `xterm`), onde o comando é rodado automaticamente em uma nova janela e a saída é capturada para análise posterior;
-  - Execute manualmente o comando em um shell interativo local, podendo digitar, colar e interagir livremente, e depois informar ao sistema a saída relevante;
-  - Edite o comando antes da execução;
-  - Pule o comando, se preferir.
+- **Interactive command execution:**
+  The tool detects commands in responses **(always presented inside markdown code blocks, e.g., ```bash ... ```)** and allows the user to:
+  - Run the command in an interactive terminal (using `xterm`), where the command is automatically executed in a new window and the output is captured for later analysis;
+  - Manually run the command in a local interactive shell, being able to type, paste and interact freely, then report the relevant output back to the system;
+  - Edit the command before execution;
+  - Skip the command, if preferred.
 
-  Após a execução, o usuário pode editar a saída capturada (abrindo no nano ou vim, se desejar) e escolher se deseja enviar essa saída de volta ao HackingGPT para análise e próximos passos. Todo o fluxo é interativo e controlado pelo usuário, permitindo integração contínua entre comandos, saídas e novas perguntas.
+  After execution, the user can edit the captured output (opening it in nano or vim if desired) and choose whether to send that output back to HackingGPT for analysis and next steps. The entire flow is interactive and user-controlled, enabling continuous integration between commands, outputs, and new queries.
 
-- **Integração de resultados:**  
-  Os resultados dos comandos executados são agregados e enviados de volta à API para nova análise, permitindo um fluxo contínuo de orientação.
+- **Results integration:**
+  The results of executed commands are aggregated and sent back to the API for further analysis, enabling a continuous guidance loop.
 
-- **Integração com múltiplas APIs:**  
-  Compatível com:
-  - OpenAI: modelos como `gpt-4.1`, `o1`, `o3-mini`;
-  - DeepSeek: modelos como `deepseek-chat` (DeepSeek-V3) e `deepseek-reasoner` (DeepSeek-R1).
+- **Multi-API integration:**
+  Compatible with:
+  - OpenAI: models such as `gpt-4.1`, `o1`, `o3-mini`;
+  - DeepSeek: models such as `deepseek-chat` (DeepSeek-V3) and `deepseek-reasoner` (DeepSeek-R1).
 
-- **Interface colorida:**  
-  Utiliza a biblioteca [Rich](https://github.com/willmcgugan/rich) para exibir mensagens formatadas e renderizar Markdown com cores no Terminal.
+- **Colored interface:**
+  Uses the [Rich](https://github.com/willmcgugan/rich) library to display formatted messages and render Markdown with colors in the terminal.
 
-- **Configuração via variáveis de ambiente:**  
-  As chaves de API são carregadas automaticamente das variáveis de ambiente para maior segurança.
+- **Environment variable configuration:**
+  API keys are automatically loaded from environment variables for increased security.
 
-- **Foco ofensivo:**  
-  O HackingGPT é orientado para segurança ofensiva. O assistente evita recomendações de mitigação, defesa ou correção, a menos que solicitado explicitamente pelo usuário. O objetivo é sempre explorar, identificar falhas e sugerir formas de exploração e pós-exploração, sem julgamentos éticos ou legais.
+- **Offensive focus:**
+  HackingGPT is oriented toward offensive security. The assistant avoids mitigation, defense, or fix recommendations unless explicitly requested by the user. The goal is always to exploit, identify flaws, and suggest exploitation and post-exploitation paths — without ethical or legal judgement.
 
-## Requisitos
+## Requirements
 
 - **Python 3.8+**
-- **Dependências externas:**
+- **External dependencies:**
   - `requests`
   - `rich`
   - `prompt_toolkit`
-- **Sistema operacional compatível:**
-  - Linux ou WSL (para suporte ao `xterm`).
-- **Chaves de API:**
-  - `OPENAI_API_KEY`: chave válida para acesso à API da OpenAI.
-  - `DEEPSEEK_API_KEY`: chave válida para acesso à API da DeepSeek.
+- **Compatible operating system:**
+  - Linux or WSL (for `xterm` support).
+- **API keys:**
+  - `OPENAI_API_KEY`: valid key for OpenAI API access.
+  - `DEEPSEEK_API_KEY`: valid key for DeepSeek API access.
 
-Para instalar as dependências, execute:
+To install the dependencies, run:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## Instalação
+## Installation
 
-1. **Clone o repositório:**
-    
+1. **Clone the repository:**
+
     ```bash
     git clone https://github.com/DouglasRao/HackingGPT.git
     ```
-    
-2. **Acesse o diretório do projeto:**
-    
+
+2. **Enter the project directory:**
+
     ```bash
     cd HackingGPT
     ```
-    
-3. **(Opcional) Crie e ative um ambiente virtual:**
-    
+
+3. **(Optional) Create and activate a virtual environment:**
+
     ```bash
     python -m venv venv
     ```
-    
-    - No Linux/macOS:
-        
+
+    - On Linux/macOS:
+
         ```bash
         source venv/bin/activate
         ```
-        
-    - No Windows:
-        
+
+    - On Windows:
+
         ```bash
         venv\Scripts\activate
         ```
-        
-4. **Instale as dependências:**
-    
+
+4. **Install the dependencies:**
+
     ```bash
     pip install -r requirements.txt
     ```
-    
-5. **Configure as variáveis de ambiente:**
-    
-    - No Linux/macOS:
-        
-        ```bash
-        export OPENAI_API_KEY="sua-chave-openai"
-        export DEEPSEEK_API_KEY="sua-chave-deepseek"
-        ```
-        
-    - No Windows (PowerShell):
-        
-        ```bash
-        $env:OPENAI_API_KEY="sua-chave-openai"
-        $env:DEEPSEEK_API_KEY="sua-chave-deepseek"
-        ```
-        
-## Uso
 
-1. **Execute o script:**
-    
-    No diretório do projeto, inicie a ferramenta:
-    
+5. **Set the environment variables:**
+
+    - On Linux/macOS:
+
+        ```bash
+        export OPENAI_API_KEY="your-openai-key"
+        export DEEPSEEK_API_KEY="your-deepseek-key"
+        ```
+
+    - On Windows (PowerShell):
+
+        ```bash
+        $env:OPENAI_API_KEY="your-openai-key"
+        $env:DEEPSEEK_API_KEY="your-deepseek-key"
+        ```
+
+## Usage
+
+1. **Run the script:**
+
+    In the project directory, start the tool:
+
     ```bash
     python hackingGPT.py
     ```
-    
-2. **Siga as instruções na tela:**
-    
-    - **Seleção do modelo:**  
-        Escolha entre os modelos disponíveis (por exemplo, `gpt-4.1`, `o1`, `o3-mini`, `deepseek-chat`, `deepseek-reasoner`, etc.).
-        
-    - **Entrada de consulta:**  
-        Digite sua consulta de pentest ou bug bounty (por exemplo: "Quero realizar um pentest básico em example.com") ou digite `desconectar` para sair.
-        
-    - **Fluxo interativo:**
-        
-        - O script enviará sua consulta à API e exibirá a resposta.
-        - Se forem detectados comandos na resposta, você poderá:
-            1. Executar o comando (com a opção de editá-lo antes);
-            2. Pular o comando.
-3. **Execução interativa com `xterm`:**
-    
-    - Quando um comando for executado, uma janela do `xterm` será aberta, permitindo uma interação direta.
-    - A saída do comando será registrada e apresentada para análise posterior.
-4. **Itere ou saia:**
 
-    - Continue fazendo novas perguntas ou processando comandos adicionais conforme necessário.
+2. **Follow the on-screen instructions:**
 
-## Contribuição
+    - **Model selection:**
+        Choose from the available models (e.g., `gpt-4.1`, `o1`, `o3-mini`, `deepseek-chat`, `deepseek-reasoner`, etc.).
 
-Contribuições são bem-vindas! Consulte o arquivo [CONTRIBUTING.md](CONTRIBUTING.md) para obter diretrizes sobre como reportar bugs, sugerir melhorias ou enviar novas funcionalidades.
+    - **Query input:**
+        Type your pentest or bug bounty query (e.g.: "I want to perform a basic pentest on example.com") or type `disconnect` to exit.
 
-## Licença
+    - **Interactive flow:**
 
-Este projeto está licenciado sob a [Licença MIT](LICENSE.txt).
+        - The script will send your query to the API and display the response.
+        - If commands are detected in the response, you can:
+            1. Run the command (with the option to edit it first);
+            2. Skip the command.
+
+3. **Interactive execution with `xterm`:**
+
+    - When a command is executed, an `xterm` window will open, allowing direct interaction.
+    - The command output will be logged and presented for later analysis.
+
+4. **Iterate or exit:**
+
+    - Keep asking new questions or processing additional commands as needed.
+
+## Contributing
+
+Contributions are welcome! See the [CONTRIBUTING.md](CONTRIBUTING.md) file for guidelines on how to report bugs, suggest improvements, or submit new features.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE.txt).
 
 ---
 
-**Desenvolvido por Douglas Rodrigues Aguiar de Oliveira**
+**Developed by Douglas Rodrigues Aguiar de Oliveira**

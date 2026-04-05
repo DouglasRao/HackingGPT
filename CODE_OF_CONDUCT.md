@@ -1,45 +1,45 @@
-# Código de Conduta
+# Code of Conduct
 
-## Nosso compromisso
+## Our commitment
 
-Nós, como contribuidores e mantenedores do projeto **HackingGPT**, nos comprometemos a proporcionar um ambiente livre de assédio e de discriminação para todos os participantes. Esperamos que todos os membros da comunidade contribuam para um ambiente seguro e acolhedor.
+We, as contributors and maintainers of the **HackingGPT** project, commit to providing an environment free of harassment and discrimination for all participants. We expect all community members to contribute to a safe and welcoming environment.
 
-## Nossos padrões de comportamento
+## Our standards of behavior
 
-Exemplos de comportamento que contribuem para criar um ambiente positivo incluem, mas não se limitam a:
+Examples of behavior that contributes to creating a positive environment include, but are not limited to:
 
-- Tratar todas as pessoas com respeito e consideração.
-- Aceitar críticas construtivas e ajudar a resolver disputas de maneira amigável.
-- Utilizar uma linguagem inclusiva e amigável.
-- Respeitar as diferenças de opinião, experiência e habilidades, procurando aprender com os demais.
+- Treating all people with respect and consideration.
+- Accepting constructive criticism and helping to resolve disputes in a friendly manner.
+- Using inclusive and welcoming language.
+- Respecting differences in opinion, experience, and skills, and seeking to learn from others.
 
-## Comportamento inaceitável
+## Unacceptable behavior
 
-Comportamentos a serem evitados, incluindo, mas não se limitando a:
+Behaviors to be avoided include, but are not limited to:
 
-- Comentários ou imagens abusivas, ofensivas ou depreciativas, inclusive em relação a gênero, orientação sexual, identidade de gênero, raça, religião, deficiência ou qualquer outra característica.
-- Assédio, intimidação ou perseguição a outros membros da comunidade.
-- Comportamento que possa criar um ambiente hostil, como linguagem vulgar ou ameaçadora.
-- Qualquer ação que intencionalmente exclua ou marginalize participantes da comunidade.
+- Abusive, offensive, or derogatory comments or images, including those related to gender, sexual orientation, gender identity, race, religion, disability, or any other characteristic.
+- Harassment, intimidation, or stalking of other community members.
+- Behavior that may create a hostile environment, such as vulgar or threatening language.
+- Any action that intentionally excludes or marginalizes community participants.
 
-## Responsabilidades dos contribuidores
+## Contributor responsibilities
 
-Os mantenedores do projeto têm o direito (e a responsabilidade) de remover, editar ou rejeitar qualquer comentário, commit, código, edição de wiki ou outro conteúdo que viole este Código de Conduta, ou recusar suporte a participantes que violem consistentemente este Código de Conduta.
+Project maintainers have the right (and responsibility) to remove, edit, or reject any comment, commit, code, wiki edit, or other content that violates this Code of Conduct, or to refuse support to participants who consistently violate this Code of Conduct.
 
-Todos os membros da comunidade também são incentivados a denunciar qualquer incidente ou comportamento que viole este Código de Conduta.
+All community members are also encouraged to report any incident or behavior that violates this Code of Conduct.
 
-## Como denunciar
+## How to report
 
-Se você presenciar ou experienciar qualquer comportamento que viole este Código de Conduta, por favor, entre em contato imediatamente com [douglas.rao@protonmail.ch](mailto:douglas.rao@protonmail.ch). Todas as denúncias serão tratadas com confidencialidade e levadas a sério.
+If you witness or experience any behavior that violates this Code of Conduct, please contact [douglas.rao@protonmail.ch](mailto:douglas.rao@protonmail.ch) immediately. All reports will be handled with confidentiality and taken seriously.
 
-## Aplicação
+## Enforcement
 
-Os mantenedores do projeto são responsáveis por esclarecer e aplicar este Código de Conduta. Se houver violações deste Código, os mantenedores poderão tomar as medidas que julgarem necessárias, incluindo, mas não se limitando a:
+Project maintainers are responsible for clarifying and enforcing this Code of Conduct. If violations occur, maintainers may take whatever action they deem necessary, including but not limited to:
 
-- Avisar o membro em questão.
-- Remover comentários ou conteúdo inadequado.
-- Bloquear ou banir membros que persistirem em comportamentos inaceitáveis.
+- Warning the member in question.
+- Removing inappropriate comments or content.
+- Blocking or banning members who persist in unacceptable behavior.
 
-Este Código de Conduta é adotado em conformidade com o [Contributor Covenant, versão 2.1](https://www.contributor-covenant.org/version/2/1/code_of_conduct/).
+This Code of Conduct is adopted in accordance with the [Contributor Covenant, version 2.1](https://www.contributor-covenant.org/version/2/1/code_of_conduct/).
 
-Agradecemos a sua colaboração para manter a comunidade **HackingGPT** um ambiente acolhedor e seguro para todos.
+We appreciate your collaboration in keeping the **HackingGPT** community a welcoming and safe environment for everyone.
